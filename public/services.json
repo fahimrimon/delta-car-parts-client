@@ -1,0 +1,51 @@
+[
+    { "_id":"1",
+      "name": "Auto Clutch & Brake",
+      "price": "TK.8,500/=",
+      "minquantity":"10",
+      "totalquantity":"50",
+      "description":"Brake P60S Big Brake Kit BBK Brake System Forged Calipers For 18inch Wheel Brake Kits Infiniti FX35 Front And Rear",
+      "img":"https://st.depositphotos.com/1706601/1282/i/600/depositphotos_12822706-stock-photo-brake-disc-and-red-calliper.jpg"
+    },
+    { "_id":"2",
+      "name": "Leather Steering Wheel",
+      "price": "TK.7,300/=",
+      "minquantity":"15",
+      "totalquantity":"60",
+      "description":"Leather Steering Wheel Hot Sale Universal Size 36 38 40 Cm Carbon Fiber Leather Car Steering Wheel Cover",
+      "img":"https://sc04.alicdn.com/kf/HTB1Nx5sXc_vK1RkSmRyq6xwupXak.jpg"
+    },
+    { "_id":"3",
+      "name": "Hanging 4k Camera",
+      "price": "TK.6,500/=",
+      "minquantity":"5",
+      "totalquantity":"50",
+      "description":"4k Camera 4k Small Dash Cam 4k Dashboard Camera 2 Inch Car Video Dvr Wifi Dash Cam Hd Car Black Box.",
+      "img":"https://www.cnet.com/a/img/resize/ad12923699b7a5101b38f1f552dfe1a8234ea842/2021/10/22/dee4faa3-6a2e-4ded-880e-77637a9195bf/81etlnljzhl-ac-sl1500.jpg?auto=webp&fit=crop&height=528&width=940"
+    },
+    { "_id":"4",
+      "name": "Side Mirror",
+      "price": "TK.3,400/=",
+      "minquantity":"15",
+      "totalquantity":"60",
+      "description":"Side Wide Car Mirror Universal Car Side Mirrors Cheap Universal Truck Accessories Side View Rotatable Adjustable",
+      "img":"https://previews.123rf.com/images/ekinyalgin/ekinyalgin1512/ekinyalgin151200040/50029746-vue-rapproch%C3%A9e-devant-le-r%C3%A9troviseur-d-une-voiture-avec-un-espace-de-copie-vierge-isol%C3%A9-sur-fond-bla.jpg"
+    },
+    { "_id":"5",
+      "name": "Fog Lights",
+      "price": "TK.4,500/=",
+      "minquantity":"20",
+      "totalquantity":"80",
+      "description":"Fog Lights Car Light Wholesale 10w 2.5inch 3inch 3.5inch COB Motorcycle LED Drl Angel Eye.",
+      "img":"https://www.energizedcustoms.co.uk/pub/media/catalog/product/t/u/tumbnail_8a62e367-5864-441e-ab6b-f77de6774a81.jpg"
+    },
+    { "_id":"6",
+      "name": "Headlight",
+      "price": "TK.7,900/=",
+      "minquantity":"15",
+      "totalquantity":"70",
+      "description":"Headlight JS OEM 63117419633 Full Led LCI Complete New F30 Led Headlight ",
+      "img":"https://5.imimg.com/data5/JU/HW/MY-20270573/car-headlight-500x500.jpg"
+    }
+    
+  ]

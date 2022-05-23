@@ -12,8 +12,8 @@ const Reviews = () => {
     return (
         <section>
             <div>
-               <h2 className='text-center text-amber-400 text-xl mt-20'>Testimonials</h2>
-               <h4 className='text-center text-2xl mb-5'>What Our Customer Says</h4>
+               <h2 className='text-center text-amber-400 text-2xl mt-20 uppercase'>Testimonials</h2>
+               <h4 className='text-center text-3xl mb-5'>What Our Customer Says</h4>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                 {

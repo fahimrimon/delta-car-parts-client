@@ -2,7 +2,7 @@ import React from "react";
 
 const BusinessSummary = () => {
   return (
-    <div className="mt-12">
+    <div className="mt-24">
       <h2 className="text-center text-amber-400 text-2xl mb-5">Business Summary</h2>
       <div class=" shadow grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 text-center">
         <div class="stat">
