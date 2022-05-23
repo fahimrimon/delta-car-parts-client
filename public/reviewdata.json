@@ -1,0 +1,44 @@
+[
+    {
+        "_id":1,
+        "name":"Sophia",
+        "review": "Well I’ve returned a part that I’ve order from Carparts.com because it was the wrong size for my vehicle. And I’ve talked to customer service and they did their job right away. And I’m getting my refund back.",
+        "img":"https://i.pinimg.com/originals/cd/d7/cd/cdd7cd49d5442e4246c4b0409b00eb39.jpg",
+        "location":"Uttora, Dhaka"
+    },
+    {
+        "_id":2,
+        "name":"Michel",
+        "review": "This was my first purchase with Delta Carparts.com. I needed a R side mirror for a Ford Escape. They had what I thought I needed, but after checking I didn't need the whole thing.",
+        "img":"https://cutewallpaper.org/22/instagram-profile-wallpapers/1109717368.jpg",
+        "location":"Ashulia, Savar"
+    },
+    {
+        "_id":3,
+        "name":"Olivia",
+        "review": "Awful awful awful! I ordered a part 2 months ago, it got lost in the mail and then was out of stock. I chatted with representatives 4 or 5 times and each time they told me it would be back in stock in 2 more weeks. ",
+        "img":"https://i.pinimg.com/564x/8d/ed/6a/8ded6a1bb4a8ceaef990aef06427b129.jpg",
+        "location":"Nagarpur, Tanagail"
+    },
+    {
+        "_id":4,
+        "name":"Amelia",
+        "review": "Louise ** was prompt to respond, knowledgeable about the products, and able to assist me with applying a military discount. She was very professional and polite, a pleasure to work with, and I will order from here again.",
+        "img":"https://blog.photofeeler.com/wp-content/uploads/2017/09/instagram-profile-picture-maker.jpg",
+        "location":"Mirpur, Dhaka"
+    },
+    {
+        "_id":5,
+        "name":"Miller",
+        "review": "I needed several issues handled and Alva did a wonderful job!! The agent was prompt, super nice and knowledgeable and helped me with everything concern I had and was able to resolve everything!",
+        "img":"https://i.pinimg.com/736x/e3/2d/c1/e32dc16c4b5d9221faf51be30501314a.jpg",
+        "location":"Mirzapur, Tangail"
+    },
+    {
+        "_id":6,
+        "name":"Layla",
+        "review": "I had a lot going on. Needed a quick return so I can order different parts. Had to go through two different customer service agents who were both extremely helpful and getting it done.",
+        "img":"https://i.pinimg.com/originals/63/f9/d5/63f9d5fd5f34c8544a31c22c3e909cec.jpg",
+        "location":"Dhanmondi, Dhaka"
+    }
+]
