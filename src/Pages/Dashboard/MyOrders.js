@@ -32,7 +32,7 @@ const MyOrders = () => {
                 <td>{order.userEmail}</td>
                 <td>{order.productName}</td>
                 <td>{order.quantity}</td>
-                <td>payment</td>
+                <td>{order.payment}</td>
                 <td>cencel</td>
               </tr>
             ))}

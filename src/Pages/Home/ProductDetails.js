@@ -35,7 +35,7 @@ const ProductDetails = () => {
       phone: phone,
       quantity: quantity,
     };
-
+     
     fetch("http://localhost:5000/purchase", {
       method: "POST",
       headers: {
@@ -46,9 +46,12 @@ const ProductDetails = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        toast("Your Product Purchase Successfull !!")
+        toast("Your Product Purchase Successfull !!") 
       });
   };
+
+  // const passwordRegex = /.{6,}/;
+  //   const validPassword = passwordRegex.test(e.target.value);
 
   return (
     <div>
@@ -57,7 +60,7 @@ const ProductDetails = () => {
       </h2>
       <div class="hero min-h-screen grid grid-cols-1">
         <div class="hero-content flex-col lg:flex-row lg:space-x-36">
-          <img src={product.img} class="max-w-sm rounded-lg shadow-2xl" />
+          <img src={product.img} class="max-w-sm rounded-lg shadow-2xl" alt=""/>
           <div>
             <h2 className="font-bold my-3 text-xl">{product.name}</h2>
             <p className="mt-3 flex">
