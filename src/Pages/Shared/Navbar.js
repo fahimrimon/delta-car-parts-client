@@ -1,15 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useAuthState } from 'react-firebase-hooks/auth';
+import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import { signOut } from "firebase/auth";
 const Navbar = () => {
-
   const [user] = useAuthState(auth);
 
-    const handleSignOut = () =>{
-        signOut(auth);
-    }
+  const handleSignOut = () => {
+    signOut(auth);
+  };
 
   const menuItems = (
     <>
@@ -19,14 +18,25 @@ const Navbar = () => {
       <li>
         <Link to="/about">About</Link>
       </li>
-      {
-            user && <li><Link to="/dashboard">Dashboard</Link></li>
-        }
-        <li>{user ? <Link className="btn btn-ghost" onClick={handleSignOut} to="/" >Sign Out</Link> : <Link to="/login">Login</Link>}</li>
+      {user && (
+        <li>
+          <Link to="/dashboard">Dashboard</Link>
+        </li>
+      )}
+      <li>
+        {user ? (
+          <Link className="btn btn-ghost" onClick={handleSignOut} to="/">
+            Sign Out
+          </Link>
+        ) : (
+          <Link to="/login">Login</Link>
+        )}
+      </li>
     </>
   );
   return (
-    <div className="navbar bg-secondary flex justify-between">
+    <div>
+      <div className="navbar bg-secondary ">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex="0" className="btn btn-ghost lg:hidden">
@@ -40,8 +50,16 @@ const Navbar = () => {
         </div>
         <a className="btn btn-ghost text-white normal-case text-xl">Delta CarParts</a>
       </div>
-      <div className="navbar-center hidden lg:flex">
+      <div className="navbar-end hidden lg:flex">
         <ul className="text-white menu menu-horizontal p-0">{menuItems}</ul>
+      </div>
+    </div>
+    <div>
+        <label tabIndex="1" for="dashboard-sidebar" className="btn btn-ghost lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
+          </svg>
+        </label>
       </div>
     </div>
   );

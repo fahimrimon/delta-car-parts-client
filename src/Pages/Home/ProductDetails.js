@@ -23,14 +23,17 @@ const ProductDetails = () => {
     event.preventDefault();
     const address = event.target.address.value;
     const phone = event.target.phone.value;
+    const quantity = event.target.quantity.value;
 
     const purchase = {
       productId: product._id,
       productName: product.name,
+      productPrice: product.price,
       userName: user.displayName,
       userEmail: user.email,
       address: address,
       phone: phone,
+      quantity: quantity,
     };
 
     fetch("http://localhost:5000/purchase", {
@@ -47,50 +50,6 @@ const ProductDetails = () => {
       });
   };
 
-  // const handleDelivered = () => {
-  //   const qr = parseInt(product.quantity);
-  //   const quantity = qr - 1;
-  //   const newQuantity = { quantity };
-  //   console.log(newQuantity);
-
-  //   const url = `https://afternoon-shelf-85047.herokuapp.com/product/${productId}`;
-  //   console.log(url);
-  //   fetch(url, {
-  //     method: "PUT",
-  //     headers: {
-  //       "content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify(newQuantity),
-  //   })
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setReload(quantity);
-  //       console.log("success", data);
-  //     });
-  // };
-
-  // const handleUpdateQuantity = (event) => {
-  //   event.preventDefault();
-  //   const qu = parseInt(product.quantity);
-  //   const quantity1 = event.target.quantity.value;
-  //   const quantity = qu + parseInt(quantity1);
-  //   const quantity2 = { quantity };
-  //   const url = `https://afternoon-shelf-85047.herokuapp.com/product/${productId}`;
-
-  //   fetch(url, {
-  //     method: "PUT",
-  //     headers: {
-  //       "content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify(quantity2),
-  //   })
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setReload(quantity);
-  //       alert("Quantity update Successfully!");
-  //       event.target.reset();
-  //     });
-  // };
   return (
     <div>
       <h2 className=" mt-7 ">
@@ -131,7 +90,7 @@ const ProductDetails = () => {
               </h2>
               <span class="label-text">Minimum Quantity: {product.minquantity}</span>
               <br />
-              <input type="text" placeholder="Enter Your Quantity" class="input input-bordered w-full max-w-xs my-2 mb-5" />
+              <input type="text" name="quantity" placeholder="Enter Your Quantity" class="input input-bordered w-full max-w-xs my-2 mb-5" />
               <br />
               <input type="submit" value="Submit" class="btn btn-primary w-full max-w-xs" />
             </form>
