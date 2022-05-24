@@ -1,7 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import PrimaryButton from "../Shared/PrimaryButton";
 
 const Service = ({ service }) => {
-  const { name, img, price, minquantity, totalquantity, description } = service;
+  const {_id, name, img, price, minquantity, totalquantity, description } = service;
+  const navigate = useNavigate();
+
+  const navigateToProductDetail = (id) => {
+    navigate(`/product/${id}`);
+  };
+
   return (
     <div class="card lg:max-w-lg bg-base-100 shadow-xl">
       <figure class="px-10 pt-10">
@@ -14,7 +22,7 @@ const Service = ({ service }) => {
         <p><small><span className="font-bold">Available Items:</span> {totalquantity}</small></p>
         <p><small><span className="font-bold">Details:</span> {description}</small></p>
         <div class="card-actions flex justify-center mt-2">
-          <button class="btn btn-primary ">Buy Now</button>
+          <span onClick={()=> navigateToProductDetail(_id)}><PrimaryButton>Buy Now</PrimaryButton></span>
         </div>
       </div>
     </div>
