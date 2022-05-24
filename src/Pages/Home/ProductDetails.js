@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useParams } from "react-router-dom";
 import auth from "../../firebase.init";
+import {toast } from 'react-toastify';
 
 const ProductDetails = () => {
   const [user, loading, error] = useAuthState(auth);
@@ -12,17 +13,39 @@ const ProductDetails = () => {
 
   useEffect(() => {
     const url = `http://localhost:5000/product/${productId}`;
-    console.log(url);
+    // console.log(url);
     fetch(url)
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, []);
 
-  const handlePurchase = event =>{
+  const handlePurchase = (event) => {
     event.preventDefault();
-    const add = event.target.address.value;
-    console.log(add);
-  }
+    const address = event.target.address.value;
+    const phone = event.target.phone.value;
+
+    const purchase = {
+      productId: product._id,
+      productName: product.name,
+      userName: user.displayName,
+      userEmail: user.email,
+      address: address,
+      phone: phone,
+    };
+
+    fetch("http://localhost:5000/purchase", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(purchase),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        toast("Your Product Purchase Successfull !!")
+      });
+  };
 
   // const handleDelivered = () => {
   //   const qr = parseInt(product.quantity);
@@ -95,17 +118,21 @@ const ProductDetails = () => {
             <p className="mb-2">{product.description}</p>
             <h1 class="text-xl font-bold mb-2 mt-3">Please Provite Your Necessary Information!</h1>
             <form onSubmit={handlePurchase}>
-              <input type="text" name="name" value={user.displayName} readOnly class="input input-bordered w-full max-w-xs" />
+              <input type="text" name="name" value={user?.displayName} readOnly class="input input-bordered w-full max-w-xs" />
               <br />
-              <input type="email" name="email" value={user.email} readOnly class="input input-bordered w-full max-w-xs my-2" />
+              <input type="email" name="email" value={user?.email} readOnly class="input input-bordered w-full max-w-xs my-2" />
               <br />
               <input type="text" name="address" placeholder="Address Here" class="input input-bordered w-full max-w-xs" />
               <br />
               <input type="text" name="phone" placeholder="Phone Number" class="input input-bordered w-full max-w-xs my-2" />
               <br />
-              <h2 className="font-bold mt-3 mb-2">Available Quantity: <span className="text-red-400">{product.totalquantity}</span></h2>
-              <span class="label-text">Minimum Quantity: {product.minquantity}</span><br />
-              <input type="text" placeholder="Enter Your Quantity"  class="input input-bordered w-full max-w-xs my-2 mb-5" /><br />
+              <h2 className="font-bold mt-3 mb-2">
+                Available Quantity: <span className="text-red-400">{product.totalquantity}</span>
+              </h2>
+              <span class="label-text">Minimum Quantity: {product.minquantity}</span>
+              <br />
+              <input type="text" placeholder="Enter Your Quantity" class="input input-bordered w-full max-w-xs my-2 mb-5" />
+              <br />
               <input type="submit" value="Submit" class="btn btn-primary w-full max-w-xs" />
             </form>
           </div>
