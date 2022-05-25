@@ -12,7 +12,7 @@ const MyOrders = () => {
   }, [user]);
   return (
     <div>
-      <h2 className="mt-3">My Order: {orders.length}</h2>
+      <h2 className="mt-3"><span className="text-xl text-secondary">My Order:</span> {orders.length}</h2>
       <div class="overflow-x-auto mt-12">
         <table class="table w-full">
           <thead>
@@ -22,18 +22,20 @@ const MyOrders = () => {
               <th>PRODUCT</th>
               <th>QUANTITY</th>
               <th>PAYMENT</th>
+              <th>ADDRESS</th>
               <th>DELETE ITEM</th>
             </tr>
           </thead>
           <tbody>
-            {orders.map((order) => (
+            {orders.map((order, index) => (
               <tr>
-                <th>1</th>
+                <th>{index + 1}</th>
                 <td>{order.userEmail}</td>
                 <td>{order.productName}</td>
                 <td>{order.quantity}</td>
                 <td>{order.payment}</td>
-                <td>cencel</td>
+                <td>{order.address}</td>
+                <td><button class="btn btn-xs">REMOVE</button></td>
               </tr>
             ))}
           </tbody>
