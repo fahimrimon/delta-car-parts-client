@@ -93,7 +93,7 @@ const ProductDetails = () => {
               </h2>
               <span class="label-text">Minimum Quantity: {product.minquantity}</span>
               <br />
-              <input type="text" name="quantity" placeholder="Enter Your Quantity" class="input input-bordered w-full max-w-xs my-2 mb-5" />
+              <input type="number" name="quantity" placeholder="Enter Your Quantity" class="input input-bordered w-full max-w-xs my-2 mb-5" />
               <br />
               <input type="submit" value="Submit" class="btn btn-primary w-full max-w-xs" />
             </form>
