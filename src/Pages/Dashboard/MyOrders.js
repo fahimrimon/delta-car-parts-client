@@ -33,7 +33,7 @@ const MyOrders = () => {
                 <td>{order.userEmail}</td>
                 <td>{order.productName}</td>
                 <td>{order.quantity}</td>
-                <td>{order.payment}</td>
+                <td>Payment <br /><small><div class="badge badge-secondary badge-xs">Not Paid</div></small></td>
                 <td>{order.address}</td>
                 <td><button class="btn btn-xs">REMOVE</button></td>
               </tr>
