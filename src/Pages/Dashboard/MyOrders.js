@@ -2,20 +2,22 @@ import { signOut } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import auth from "../../firebase.init";
 
-const priceToInt = (s) => {
-  let num = "";
-  for (let ch of s) {
-    if (ch >= "0" && ch <= "9") num += ch;
-  }
-  return parseInt(num);
-};
+// const priceToInt = (s) => {
+//   let num = "";
+//   for (let ch of s) {
+//     if (ch >= "0" && ch <= "9") num += ch;
+//   }
+//   return parseInt(num);
+// };
 
 const MyOrders = () => {
   const [orders, setOrders] = useState([]);
   const [user] = useAuthState(auth);
   const navigate = useNavigate();
+
   useEffect(() => {
     fetch(`http://localhost:5000/purchase?userEmail=${user.email}`, {
       method: "GET",
@@ -36,6 +38,24 @@ const MyOrders = () => {
         setOrders(data);
       });
   }, [user]);
+
+  const handleDelete = (id) => {
+    const proceed = window.confirm("Are You Sure?");
+    if (proceed) {
+      const url = `http://localhost:5000/purchase/${id}`;
+      fetch(url, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((deleteItem) => {
+          console.log(deleteItem);
+          toast("Your item is Delete now!");
+          const remaining = orders.filter((order) => order._id !== id);
+          setOrders(remaining);
+        });
+    }
+  };
+
   return (
     <div>
       <h2 className="mt-3">
@@ -61,17 +81,10 @@ const MyOrders = () => {
                 <td>{order.userEmail}</td>
                 <td>{order.productName}</td>
                 <td>{order.quantity}</td>
-                <td>
-                  {priceToInt(order.productPrice) * parseInt(order.quantity)}
-
-                  <br />
-                  <small>
-                    <div class="badge badge-secondary badge-xs">Not Paid</div>
-                  </small>
-                </td>
+                <td>{order.productPrice * order.quantity}</td>
                 <td>{order.address}</td>
                 <td>
-                  <button class="btn btn-xs">REMOVE</button>
+                  <button onClick={() => handleDelete(order._id)} class="btn btn-xs">REMOVE</button>
                 </td>
               </tr>
             ))}

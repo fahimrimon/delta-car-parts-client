@@ -17,7 +17,7 @@ const Service = ({ service }) => {
       </figure>
       <div class="card-body leading-4">
         <h2 class="card-title font-bold">{name}</h2>
-        <p>{price}</p>
+        <p>Tk: {price}</p>
         <p><small><span className="font-bold">Minimum Order:</span> {minquantity}</small></p>
         <p><small><span className="font-bold">Available Items:</span> {totalquantity}</small></p>
         <p><small><span className="font-bold">Details:</span> {description}</small></p>
