@@ -33,7 +33,7 @@ const ProductDetails = () => {
     const purchase = {
       productId: product._id,
       productName: product.name,
-      productPrice: product.price,
+      productPrice: parseInt(product.price) * parseInt(quantity),
       userName: user.displayName,
       userEmail: user.email,
       address: address,
