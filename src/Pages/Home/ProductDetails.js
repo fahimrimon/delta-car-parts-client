@@ -14,7 +14,7 @@ const ProductDetails = () => {
   // const [reload, setReload] = useState(true);
 
   useEffect(() => {
-    const url = `http://localhost:5000/product/${productId}`;
+    const url = `https://powerful-beyond-98796.herokuapp.com/product/${productId}`;
     // console.log(url);
     fetch(url)
       .then((res) => res.json())
@@ -41,7 +41,7 @@ const ProductDetails = () => {
       quantity: quantity,
     };
 
-    fetch("http://localhost:5000/purchase", {
+    fetch("https://powerful-beyond-98796.herokuapp.com/purchase", {
       method: "POST",
       headers: {
         "content-type": "application/json",

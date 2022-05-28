@@ -1,16 +1,14 @@
-import React from 'react';
+import React from "react";
 
 const MyProfile = () => {
-    return (
-        <div>
-            <h2>My Profile</h2>
-        </div>
-    );
+  return (
+    <div>
+      <h2>My Profile</h2>
+    </div>
+  );
 };
 
 export default MyProfile;
-
-
 
 // import React, { useEffect, useState } from "react";
 // import { Table } from "react-bootstrap";
@@ -31,7 +29,7 @@ export default MyProfile;
 //     const getOrder = async () => {
 //       const email = user?.email;
 
-//       const url = http://localhost:5000/orders?email=${email};
+//       const url = https://powerful-beyond-98796.herokuapp.com/orders?email=${email};
 //       try {
 //         const { data } = await axiosPrivate.get(url);
 //         setOrders(data);
@@ -49,7 +47,7 @@ export default MyProfile;
 //   const handleDelete = (id) => {
 //     const proceed = window.confirm("Are You Sure?");
 //     if (proceed) {
-//       const url = http://localhost:5000/orders/${id};
+//       const url = https://powerful-beyond-98796.herokuapp.com/orders/${id};
 //       fetch(url, {
 //         method: "DELETE",
 //       })
@@ -122,7 +120,7 @@ export default MyProfile;
 //                     class="fa-solid fa-trash-can fs-5"
 //                   ></i>
 //                 )}
-             
+
 //               </td>
 //             </tbody>
 //           ))}
@@ -134,8 +132,6 @@ export default MyProfile;
 
 // export default MyOrder;
 
-
-
 // import React from "react";
 // import { useAuthState } from "react-firebase-hooks/auth";
 // import { useForm } from "react-hook-form";
@@ -144,11 +140,11 @@ export default MyProfile;
 // import { toast } from "react-toastify";
 // import auth from "../../../firebase.init";
 // import Loading from "../../shared/Loading";
- 
+
 // const BuyTool = () => {
 //   const [user] = useAuthState(auth);
 //   const { id } = useParams();
- 
+
 //   const { register, handleSubmit, reset } = useForm();
 //   const onSubmit = (data) => {
 //     if (data?.order_quantity < data?.min_order_quantity) {
@@ -185,11 +181,11 @@ export default MyProfile;
 //       (res) => res.json()
 //     )
 //   );
- 
+
 //   if (isLoading) {
 //     return <Loading></Loading>;
 //   }
- 
+
 //   return (
 //     <div className="container mx-auto my-5 pb-5">
 //       <div>
@@ -207,7 +203,7 @@ export default MyProfile;
 //               style={{ height: "500px" }}
 //               alt=""
 //             />
- 
+
 //             <h6 className="fw-bold text-center mb-5 py-2">
 //               Tools ID: {product._id}
 //             </h6>
@@ -222,7 +218,7 @@ export default MyProfile;
 //           >
 //             <p>{user.displayName}</p>
 //             <p>{user.email}</p>
- 
+
 //             <input
 //               placeholder="Name"
 //               value={user.email}
@@ -248,7 +244,7 @@ export default MyProfile;
 //                   {...register("toolsname", { required: true })}
 //                 />
 //               </div>
- 
+
 //               <div className="flex justify-center items-center gap-2 ">
 //                 <label>Description:</label>
 //                 <input
@@ -258,7 +254,7 @@ export default MyProfile;
 //                   {...register("description", { required: true })}
 //                 />{" "}
 //               </div>
- 
+
 //               <div className="flex justify-center items-center gap-2 ">
 //                 <label>Minimum Quantity:</label>
 //                 <input
@@ -268,7 +264,7 @@ export default MyProfile;
 //                   {...register("min_order_quantity", { required: true })}
 //                 />
 //               </div>
- 
+
 //               <div className="flex justify-center items-center gap-2 ">
 //                 <label>Available Quantity:</label>
 //                 <input
@@ -278,7 +274,7 @@ export default MyProfile;
 //                   {...register("avail_quantity", { required: true })}
 //                 />
 //               </div>
- 
+
 //               <div className="flex justify-center items-center gap-2 ">
 //                 <label>Price :</label>
 //                 <input
@@ -288,7 +284,7 @@ export default MyProfile;
 //                   {...register("price", { required: true })}
 //                 />
 //               </div>
- 
+
 //               <div className="flex justify-center items-center gap-2 ">
 //                 <label>photoURL :</label>
 //                 <input
@@ -307,7 +303,7 @@ export default MyProfile;
 //                   {...register("material", { required: true })}
 //                 />
 //               </div>
- 
+
 //               <div className="flex justify-center items-center gap-2 ">
 //                 <label>Address :</label>
 //                 <input
@@ -317,7 +313,7 @@ export default MyProfile;
 //                   {...register("address", { required: true })}
 //                 />
 //               </div>
- 
+
 //               <div className="flex justify-center items-center  gap-2">
 //                 <label>Phone :</label>
 //                 <input
@@ -327,7 +323,7 @@ export default MyProfile;
 //                   {...register("phone", { required: true })}
 //                 />
 //               </div>
- 
+
 //               <div className="flex justify-center items-center gap-2 ">
 //                 <label>Order Quantity :</label>
 //                 <input
@@ -338,26 +334,26 @@ export default MyProfile;
 //                 />
 //               </div>
 //             </div>
- 
+
 //             <input
 //               className="border p-2 mb-2 btn btn-warning"
 //               type="submit"
 //               value="Place order"
 //             />
 //           </form>
- 
+
 //           {/* <h6>{id}</h6>
-   
+
 //       <h6>{tool.min_order_quantity}</h6>
 //       <h4>{user?.email}</h4>
 //       <h4>{user?.uid}</h4>
 //       <h4>{user?.displayName}</h4>
-     
+
 //       {console.log(user)} */}
 //         </div>
 //       </div>
 //     </div>
 //   );
 // };
- 
+
 // export default BuyTool;

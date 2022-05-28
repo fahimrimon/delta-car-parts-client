@@ -10,13 +10,13 @@ const Blogs = () => {
           </h2>
         </div>
         <div>
-          <label for="my-modal-1" class="btn modal-button ml-5">
+          <label htmlFor="my-modal-1" class="btn modal-button ml-5">
             Ans
           </label>
           <input type="checkbox" id="my-modal-1" class="modal-toggle" />
           <div class="modal">
             <div class="modal-box relative">
-              <label for="my-modal-1" class="btn btn-sm btn-circle absolute right-2 top-2">
+              <label htmlFor="my-modal-1" class="btn btn-sm btn-circle absolute right-2 top-2">
                 ✕
               </label>
               <h3 class="text-lg font-bold text-secondary">How does prototypical inheritance work?</h3>
@@ -35,13 +35,13 @@ const Blogs = () => {
           </h2>
         </div>
         <div>
-          <label for="my-modal-2" class="btn modal-button ml-5">
+          <label htmlFor="my-modal-2" class="btn modal-button ml-5">
             Ans
           </label>
           <input type="checkbox" id="my-modal-2" class="modal-toggle" />
           <div class="modal">
             <div class="modal-box relative">
-              <label for="my-modal-2" class="btn btn-sm btn-circle absolute right-2 top-2">
+              <label htmlFor="my-modal-2" class="btn btn-sm btn-circle absolute right-2 top-2">
                 ✕
               </label>
               <h3 class="text-lg font-bold text-secondary">What are the different ways to manage a state in a React application?</h3>
@@ -62,13 +62,13 @@ const Blogs = () => {
           </h2>
         </div>
         <div>
-          <label for="my-modal-3" class="btn modal-button ml-5">
+          <label htmlFor="my-modal-3" class="btn modal-button ml-5">
             Ans
           </label>
           <input type="checkbox" id="my-modal-3" class="modal-toggle" />
           <div class="modal">
             <div class="modal-box relative">
-              <label for="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2">
+              <label htmlFor="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2">
                 ✕
               </label>
               <h3 class="text-lg font-bold text-secondary">How will you improve the performance of a React Application?</h3>
@@ -90,13 +90,13 @@ const Blogs = () => {
           </h2>
         </div>
         <div>
-          <label for="my-modal-4" class="btn modal-button ml-5">
+          <label htmlFor="my-modal-4" class="btn modal-button ml-5">
             Ans
           </label>
           <input type="checkbox" id="my-modal-4" class="modal-toggle" />
           <div class="modal">
             <div class="modal-box relative">
-              <label for="my-modal-4" class="btn btn-sm btn-circle absolute right-2 top-2">
+              <label htmlFor="my-modal-4" class="btn btn-sm btn-circle absolute right-2 top-2">
                 ✕
               </label>
               <h3 class="text-lg font-bold text-secondary">What is a unit test? Why should write unit tests?</h3>
@@ -116,13 +116,13 @@ const Blogs = () => {
           </h2>
         </div>
         <div>
-          <label for="my-modal-5" class="btn modal-button ml-5">
+          <label htmlFor="my-modal-5" class="btn modal-button ml-5">
             Ans
           </label>
           <input type="checkbox" id="my-modal-5" class="modal-toggle" />
           <div class="modal">
             <div class="modal-box relative">
-              <label for="my-modal-5" class="btn btn-sm btn-circle absolute right-2 top-2">
+              <label htmlFor="my-modal-5" class="btn btn-sm btn-circle absolute right-2 top-2">
                 ✕
               </label>
               <h3 class="text-lg font-bold text-secondary">Why you do not set the state directly in React.</h3>

@@ -19,7 +19,7 @@ const MyOrders = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/purchase?userEmail=${user.email}`, {
+    fetch(`https://powerful-beyond-98796.herokuapp.com/purchase?userEmail=${user.email}`, {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -42,7 +42,7 @@ const MyOrders = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm("Are You Sure?");
     if (proceed) {
-      const url = `http://localhost:5000/purchase/${id}`;
+      const url = `https://powerful-beyond-98796.herokuapp.com/purchase/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -81,12 +81,25 @@ const MyOrders = () => {
                 <td>{order.userEmail}</td>
                 <td>{order.productName}</td>
                 <td>{order.quantity}</td>
-                <td>{order.productPrice}<br></br>{(order.productPrice && !order.paid) && <Link to={`/dashboard/payment/${order._id}`}><button className='btn btn-xs btn-success'>Pay</button></Link>}
-                {(order.productPrice && order.paid) && <p><span className='text-success'>Paid</span></p>}
+                <td>
+                  {order.productPrice}
+                  <br></br>
+                  {order.productPrice && !order.paid && (
+                    <Link to={`/dashboard/payment/${order._id}`}>
+                      <button className="btn btn-xs btn-success">Pay</button>
+                    </Link>
+                  )}
+                  {order.productPrice && order.paid && (
+                    <p>
+                      <span className="text-success">Paid</span>
+                    </p>
+                  )}
                 </td>
                 <td>{order.address}</td>
                 <td>
-                  <button onClick={() => handleDelete(order._id)} class="btn btn-xs">REMOVE</button>
+                  <button onClick={() => handleDelete(order._id)} class="btn btn-xs">
+                    REMOVE
+                  </button>
                 </td>
               </tr>
             ))}
