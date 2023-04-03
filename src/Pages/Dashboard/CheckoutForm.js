@@ -13,7 +13,7 @@ const CheckoutForm = ({ order }) => {
   const { _id, productPrice, userEmail, userName } = order;
 
   useEffect(() => {
-    fetch("https://powerful-beyond-98796.herokuapp.com/create-payment-intent", {
+    fetch("https://delta-car-parts-server.vercel.app/create-payment-intent", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -76,7 +76,7 @@ const CheckoutForm = ({ order }) => {
         order: _id,
         transactionId: paymentIntent.id,
       };
-      fetch(`https://powerful-beyond-98796.herokuapp.com/purchase/${_id}`, {
+      fetch(`https://delta-car-parts-server.vercel.app/purchase/${_id}`, {
         method: "PATCH",
         headers: {
           "content-type": "application/json",
