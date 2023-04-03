@@ -6,7 +6,7 @@ const AddProduct = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
     console.log(data);
-    const url = `https://powerful-beyond-98796.herokuapp.com/product`;
+    const url = `https://delta-car-parts-server.vercel.app/product`;
     fetch(url, {
       method: "POST",
       headers: {
