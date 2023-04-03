@@ -12,7 +12,7 @@ const stripePromise = loadStripe(
 
 const Payment = () => {
   const { id } = useParams();
-  const url = `https://powerful-beyond-98796.herokuapp.com/purchase/${id}`;
+  const url = `https://delta-car-parts-server.vercel.app/purchase/${id}`;
   const { data: order, isLoading } = useQuery(["purchase", id], () =>
     fetch(url, {
       method: "GET",
