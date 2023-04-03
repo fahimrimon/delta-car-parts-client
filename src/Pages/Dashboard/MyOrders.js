@@ -19,7 +19,7 @@ const MyOrders = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`https://powerful-beyond-98796.herokuapp.com/purchase?userEmail=${user.email}`, {
+    fetch(`https://delta-car-parts-server.vercel.app/purchase?userEmail=${user.email}`, {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -42,7 +42,7 @@ const MyOrders = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm("Are You Sure?");
     if (proceed) {
-      const url = `https://powerful-beyond-98796.herokuapp.com/purchase/${id}`;
+      const url = `https://delta-car-parts-server.vercel.app/purchase/${id}`;
       fetch(url, {
         method: "DELETE",
       })
