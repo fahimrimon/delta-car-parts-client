@@ -14,7 +14,7 @@ const ProductDetails = () => {
   // const [reload, setReload] = useState(true);
 
   useEffect(() => {
-    const url = `https://powerful-beyond-98796.herokuapp.com/product/${productId}`;
+    const url = `https://delta-car-parts-server.vercel.app/product/${productId}`;
     // console.log(url);
     fetch(url)
       .then((res) => res.json())
@@ -41,7 +41,7 @@ const ProductDetails = () => {
       quantity: quantity,
     };
 
-    fetch("https://powerful-beyond-98796.herokuapp.com/purchase", {
+    fetch("https://delta-car-parts-server.vercel.app/purchase", {
       method: "POST",
       headers: {
         "content-type": "application/json",
