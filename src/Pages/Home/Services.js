@@ -5,7 +5,7 @@ const Services = () => {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-    fetch("https://powerful-beyond-98796.herokuapp.com/product")
+    fetch("https://delta-car-parts-server.vercel.app/product")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
